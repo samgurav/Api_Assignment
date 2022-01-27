@@ -1,0 +1,85 @@
+API: 
+1)It stand for application programming interface Is a software interface that allows 2 application to interact with each other
+without any user intervention.
+2)IT is a collection of function. It is a code that can be accessed or executed.
+3)It helps two different software to communicate and exchange data with each other.
+
+database====>business Logic (API)-------> ios, android ,web
+
+->Web APIs
+1)Server side: JSON or XML
+2)Client side: extend functionality within a web browser or HTTP client.
+example:
+->Google Map API
+2)youtube API
+->API testing Tools
+2)Postman,vRest,Ping-Api
+->Soap and Rest API
+SOAP: simple object Access protocol 
+REST: representational state transfer
+
+->SOAP api has an official standard because it is a protocol while rest api has no official
+standard (it is an architectural style)
+->Soap uses only http and xml while rest uses http,json,xml,url for data communication and transfer.
+->Express js we can define routes as a api
+app.METHOD(url,callback)
+->methods: get ,post,put,delete
+app.get("/api/getdata",(req,res)=>{
+    //get data
+    res.status(200).json({'empdata':[]})
+})
+ 
+ async function deletePost(id){
+     await postModel.deleteOne({_id:id},)
+ }
+
+ app.delete("/:id",async(req,res)=>{
+     await deletePost(req.params.id);
+     res.json({"msg":"deleted"});
+ })
+
+
+ -->APP crud api of employee
+
+ get /api/getdata
+ post  /api postdata
+
+ put  /api/updatedata/1
+
+ delete /api/deletedata/1
+
+ method.js
+ getData(){
+
+ }
+ postdata(data){
+
+ }
+ deleteData(id){
+
+ }
+ update(id,data){
+
+ }
+ ->we can use all these method in routes/api
+
+ routes.js
+ db.js
+ employeeSchema.js
+
+
+ module.exports={
+     getData,updateData,postData
+ }
+ const{getData,updateData,postData}=require('/filename')
+
+
+
+
+
+
+
+
+
+ 
+
